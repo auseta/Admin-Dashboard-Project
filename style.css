@@ -1,0 +1,158 @@
+:root {
+  --gray-color: #808080;
+  --gray-bg-color: #E2E8F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  background-color: #a9a9a9;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 3.5fr;
+}
+
+.aside {
+  grid-row: 1 / 3;
+  background-color: aqua;
+}
+
+.header {
+  grid-column: 2 / 3;
+  background-color: tomato;
+}
+
+.main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  grid-template-columns: 3fr 1fr;
+  background-color: var(--gray-bg-color);
+}
+
+.main-section, .main-aside {
+  grid-template-rows: 1fr 8fr;
+}
+
+.main-section > h3, .main-aside > h3 {
+  align-self: flex-end;
+  padding: 0 0 15px 25px;
+}
+
+.projects {
+  width: 90%;
+  padding-left: 25px;
+  gap: 25px;
+  row-gap: 20px;
+  margin-bottom: 50px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project {
+  border-radius: 10px;
+  padding: 25px 15px 0px 15px;
+  border-left: 10px solid orange;
+  background-color: #ffffff;
+  box-shadow: 2px 0px 8px 0px #808080
+}
+
+.project p {
+  padding-right: 55px;
+  color: #636363;
+}
+
+.project h3 {
+  padding-bottom: 5px;
+}
+
+.project ul {
+  padding: 40px 15px 14px;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 18px;
+}
+
+.project ul li img {
+  width: 25px;
+}
+
+.main-aside {
+  grid-template-rows: 1fr 8fr;
+}
+
+.main-aside > h3 {
+  padding-left: 0;
+}
+
+.aside-content .news {
+  padding: 25px;
+}
+
+.aside-content .news, .aside-content .trending-accounts {
+  width: 95%;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 2px 4px 8px -3px #808080
+}
+
+.new:nth-child(1) {
+  border-bottom: 1px solid #8B8B8B;
+  padding-bottom: 15px;
+}
+
+.new:nth-child(2) {
+  padding: 15px;
+  padding-left: 0;
+}
+
+.new:nth-child(3) {
+  padding-top: 15px;
+  border-top: 1px solid #8B8B8B;
+}
+
+.new p {
+  color: #8B8B8B;
+}
+
+.aside-content > h3 {
+  padding: 25px;
+  padding-left: 0;
+  padding-bottom: 8px;
+}
+
+.aside-content .trending-accounts {
+  padding: 0 12px;
+}
+
+.trending-accounts .account img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.account {
+  padding: 12px;
+  grid-template-columns: 1fr 4fr;
+}
+
+.account .info {
+  padding-left: 5px;
+  grid-template-rows: 1fr 1fr;
+}
+
+.account .info p {
+  color: var(--gray-color);
+  align-self: flex-start;
+  font-size: 16px;
+}
+
+.account .info h5 {
+  align-self: flex-end;
+}
