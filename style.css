@@ -1,4 +1,6 @@
 :root {
+  --blue-color: #1992D4;
+  --white-color: #ffffff;
   --gray-color: #808080;
   --gray-bg-color: #E2E8F0;
 }
@@ -20,14 +22,118 @@
   grid-template-rows: 1fr 3.5fr;
 }
 
+/* SIDEBAR */
+
 .aside {
   grid-row: 1 / 3;
-  background-color: aqua;
+  grid-template-rows: 1fr 8fr;
+  background-color: var(--blue-color);
 }
+
+.aside-logo {
+  grid-template-columns: 1fr 3fr;
+  color: var(--white-color);
+  align-items: center;
+}
+
+.aside-logo img {
+  width: 50px;
+  justify-self: center;
+  filter: invert(1);
+}
+
+/* HEADER */
 
 .header {
   grid-column: 2 / 3;
-  background-color: tomato;
+  background-color: var(--white-color);
+  grid-template-columns: 2fr 1fr;
+}
+
+.search {
+  grid-template-columns: 1fr 8fr;
+  align-items: center;
+}
+
+.search label {
+  justify-self: flex-end;
+  padding-right: 15px;
+}
+
+.search label img {
+  width: 26px;
+}
+
+.search input {
+  border: none;
+  width: 90%;
+  border-radius: 15px;
+  padding: 10px 25px;
+  outline: none;
+  background-color: #E2E8F0;
+}
+
+.notifications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notifications ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.notifications img {
+  width: 30px;
+}
+
+.notifications img[alt="profile-picture"] {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  align-items: center;
+  gap: 15px;
+  grid-template-columns: 1fr 6fr;
+}
+
+.profile-info img {
+  justify-self: flex-end;
+  align-items: center;
+  width: 65px;
+  border-radius: 50%;
+}
+
+.info-account small {
+  font-size: 14px;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+
+.actions {
+  align-items: center;
+}
+
+.actions ul {
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  gap: 30px;
+  padding-right: 100px;
+}
+
+.actions ul li button {
+  padding: 13px 20px;
+  width: 110px;
+  background-color: var(--blue-color);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
 }
 
 .main {
