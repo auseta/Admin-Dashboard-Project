@@ -1,5 +1,5 @@
 :root {
-  --blue-color: #1992D4;
+  --blue-color: #1991d2;
   --white-color: #ffffff;
   --gray-color: #808080;
   --gray-bg-color: #E2E8F0;
@@ -31,6 +31,7 @@
 }
 
 .aside-logo {
+  gap: 15px;
   display: flex;
   color: var(--white-color);
   align-items: center;
@@ -42,6 +43,10 @@
   width: 55px;
   justify-self: center;
   filter: invert(1);
+}
+
+.aside-logo h1 {
+  font-size: 28px;
 }
 
 .aside-secctions ul {
@@ -164,6 +169,14 @@
   font-size: 16px;
   border-radius: 25px;
   border: none;
+}
+
+.actions ul li button:hover {
+  background-color: #116592;
+}
+
+.actions ul li button:active {
+  background-color: #0a3b56;
 }
 
 /* MAIN */
